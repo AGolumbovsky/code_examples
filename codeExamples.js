@@ -17,3 +17,8 @@ var arr = [
 ];
 
 arr[1](arr[0].number);
+
+// arguments
+if (arguments.length === 0) {
+    console.log("no parameters specified");
+}
