@@ -34,3 +34,53 @@ function yo (greeting) {
     }
 }
 yo("OUTER greeting")("INNER name");
+
+//catch it before it flies away
+
+//this will work for a different i instead of all being the last one -- 3
+
+function buildEr () {
+    
+    var arr = [];
+    
+    for(var i=0; i<3; i++) {
+        arr.push(
+            (function(j) {
+                
+                return function(){
+                    
+                    console.log(j);
+                    
+                }
+            })(i)
+        );
+    };
+    
+    return arr;
+}
+
+var bldr = buildEr();
+
+// invoke the first function from the arr
+bldr[0]();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
