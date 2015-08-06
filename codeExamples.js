@@ -70,11 +70,16 @@ bldr[0]();
 
 
 
+// sorry, I had to do it...
+var is = {
+    some: {
+        bullshit: function() {
+            console.log('Right you are, mister');
+        }
+    }
+}
 
-
-
-
-
+this.is.some.bullshit(); // I called it 
 
 
 
