@@ -39,6 +39,8 @@ yo("OUTER greeting")("INNER name");
 
 //this will work for a different i instead of all being the last one -- 3
 
+// easy to use 'let' in the es6 instead of this code
+
 function buildEr () {
     
     var arr = [];
