@@ -74,12 +74,34 @@ bldr[0]();
 var is = {
     some: {
         bullshit: function() {
+        
             console.log('Right you are, mister');
         }
     }
 }
 
 this.is.some.bullshit(); // I called it 
+
+
+// functional programming
+
+function mapEach (arr, fn) {
+    
+    var newArr = [];
+    
+    for (var i = 0; i < arr.length; i++) {
+        newArr.push(
+         fn(arr[i]);
+        )
+    }
+    return newArr;
+}
+
+var numeros = [1,3,7,5,8,3,0];
+
+var double = mapEach(numeros, function(num) {
+    return num * 2;
+});
 
 
 
