@@ -104,7 +104,26 @@ var double = mapEach(numeros, function(num) {
 });
 
 
+// bind()
 
+var persona = {
+    firstName: "Arnold",
+    lastName: "Schwarzenegger",
+    getFullName: function() {
+        var fullName = this.firstName + ' ' + this.lastName;
+        return fullName;
+    }
+}
+
+// this function will not work without bind()
+
+var logName = function() {
+    console.log("name is: " + this.getFullName() )
+}
+// using bind()
+
+var logBound = logName.bind(persona);
+logBound();
 
 
 
