@@ -124,11 +124,21 @@ var logName = function() {
 
 var logBound = logName.bind(persona);
 logBound();
+// OR 
+var logName = function(arg1, arg2) {
+    console.log("name is: " + this.getFullName() )
+}.bind(persona)
 
+// call
+logName.call("what .this will be", arg1, arg2)
+//apply (almost same but takes an array of args)
+logName.apply("the .this", [arg1, arg2])
 
-
-
-
-
+//function borrowing
+persona2 = {
+    firstName: "Jean-Claude",
+    lastName: "Van Dame"
+}
+logBound.call(persona2)
 
 
