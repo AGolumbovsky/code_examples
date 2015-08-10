@@ -104,7 +104,7 @@ var double = mapEach(numeros, function(num) {
 });
 
 
-// bind()
+// bind() (creates a copy with .this you define)
 
 var persona = {
     firstName: "Arnold",
@@ -115,7 +115,7 @@ var persona = {
     }
 }
 
-// this function will not work without bind()
+// following function will not work without bind()
 
 var logName = function() {
     console.log("name is: " + this.getFullName() )
@@ -140,5 +140,15 @@ persona2 = {
     lastName: "Van Dame"
 }
 logBound.call(persona2)
+
+// fn currying
+function multiply(a, b) {
+    return a * b;
+}
+//sets .this(no change) and fixes first parameter to be 2
+var multiplyBy2 = multiply.bind(this, 2);
+
+multiplyBy2(5);
+
 
 
