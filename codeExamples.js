@@ -151,4 +151,15 @@ var multiplyBy2 = multiply.bind(this, 2);
 multiplyBy2(5);
 
 
+//constructors
+function Drink(proof, country) {
+    this.name = name,
+    this.country = country
+}
+// new will create an empty object, invoke the Drink, return the object(if you don't use return statement)
+var vodka = new Drink(80, 'around Russia');
+var chacha = new Drink(90, "Georgia");
+
+
+
 
