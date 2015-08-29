@@ -156,10 +156,16 @@ function Drink(proof, country) {
     this.name = name,
     this.country = country
 }
+
+
 // new will create an empty object, invoke the Drink, return the object(if you don't use return statement)
 var vodka = new Drink(80, 'around Russia');
 var chacha = new Drink(90, "Georgia");
 
 
-
-
+// this will return boolean whether String object longer than limit
+// function sits on the String prototype and is accessible by all String objects
+String.prototype.isGreaterThan = function(limit) {
+    return this.length < limit;
+}
+console.log("zakobu".isGreaterThan(6)); // false; limit = 7 --> true
