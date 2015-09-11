@@ -165,6 +165,7 @@ var chacha = new Drink(90, "Georgia");
 
 // this will return boolean whether String object longer than limit
 // function sits on the String prototype and is accessible by all String objects
+// the string is converted into an object
 String.prototype.isGreaterThan = function(limit) {
     return this.length < limit;
 }
