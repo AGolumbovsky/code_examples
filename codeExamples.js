@@ -170,3 +170,19 @@ String.prototype.isGreaterThan = function(limit) {
     return this.length < limit;
 }
 console.log("zakobu".isGreaterThan(6)); // false; limit = 7 --> true
+
+
+
+// polyfill thing for Object.create, if doesn't exist in older browsers
+
+  
+  if (!Object.create) {
+      Object.create = function(o) {
+        if (arguments.length > 1) {
+throw new Error('Object.create implementation... blah .... only accepts the first parameter') 
+        function F() {};
+        F.prototype = o;
+        return new F();
+        }
+      }
+  }
