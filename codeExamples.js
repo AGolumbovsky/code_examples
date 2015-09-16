@@ -186,3 +186,16 @@ throw new Error('Object.create implementation... blah .... only accepts the firs
         }
       }
   }
+
+// javascript works in mysterious ways
+// more stuff on types of stuff
+var w = [
+    'some string', 
+    {
+        one: "uno",
+        two: "dos"
+    },
+    4.55555555
+] ;
+console.log(typeof w); // will return "object"
+console.log(Object.prototype.toString.call(w)); // will return "[object array]".
