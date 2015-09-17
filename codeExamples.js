@@ -189,6 +189,7 @@ throw new Error('Object.create implementation... blah .... only accepts the firs
 
 // javascript works in mysterious ways
 // more stuff on types of stuff
+
 var w = [
     'some string', 
     {
@@ -199,3 +200,10 @@ var w = [
 ] ;
 console.log(typeof w); // will return "object"
 console.log(Object.prototype.toString.call(w)); // will return "[object array]".
+
+
+typeof null; // !!! will return "object" !!!
+typeof function() {}; // will return "function" so there is a way to tell from regular object
+
+
+
