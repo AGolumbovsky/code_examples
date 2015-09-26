@@ -104,7 +104,7 @@ var double = mapEach(numeros, function(num) {
 });
 
 
-// bind() (creates a copy with .this you define)
+// bind() (creates a permanent copy with .this you define)
 
 var persona = {
     firstName: "Arnold",
@@ -148,6 +148,7 @@ function multiply(a, b) {
 //sets .this(no change) and fixes first parameter to be 2
 var multiplyBy2 = multiply.bind(this, 2);
 
+// this fn will only need the second parameter since this and first param are set above
 multiplyBy2(5);
 
 
