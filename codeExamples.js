@@ -205,5 +205,46 @@ console.log(Object.prototype.toString.call(w)); // will return "[object array]".
 typeof null; // !!! will return "object" !!!
 typeof function() {}; // will return "function" so there is a way to tell from regular object
 
+// javasript bugly behavior
+var objecto = {
+    
+    mutee: "Original name", 
+    
+    rabbitHole: function() {
+        
+        this.mutee = "first mutation" // will change value of mutee, it's OK
+        console.log(this);
+        
+        var bugly = function() {
+            
+            this.mutee = "second mutation" // this wii actually affect the GLOBAL obj. Not Cool if you don't know
+            condole.log(this);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
