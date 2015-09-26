@@ -205,6 +205,7 @@ console.log(Object.prototype.toString.call(w)); // will return "[object array]".
 typeof null; // !!! will return "object" !!!
 typeof function() {}; // will return "function" so there is a way to tell from regular object
 
+
 // javasript bugly behavior
 var objecto = {
     
@@ -217,18 +218,34 @@ var objecto = {
         
         var bugly = function() {
             
-            this.mutee = "second mutation" // this wii actually affect the GLOBAL obj. Not Cool if you don't know
-            condole.log(this);
+            this.mutee = "second mutation" // this wii actually affect the **GLOBAL** obj. Not Cool if you don't know
+            console.log(this);
         }
+        bugly();
     }
 }
+objecto.rabbitHole();
+
+// example of call and function borrowing:
+// obj_2 borrows function from obj_1 and sets this to be obj_2. Pretty cool if you ask me
+obj_1 = {
+    uno: "uno",
+    
+    fun: function(ein, zwei) {
+        
+        this.uno = ein;
+        this.dos = zwei;
+    }
+};
 
 
+obj_2 = {
+    uno: "odin", 
+    dva: "dva"
+};
 
-
-
-
-
+obj_1.fun.call(obj_2, "ebalaZhabaGadyuku", "How much is the fish?");
+console.log(obj_2);
 
 
 
