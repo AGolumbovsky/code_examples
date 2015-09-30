@@ -242,7 +242,7 @@ obj_1 = {
 
 obj_2 = {
     uno: "odin", 
-    dva: "dva"
+    dos: "dva"
 };
 
 obj_1.fun.call(obj_2, "ebalaZhabaGadyuku", "How much is the fish?");
@@ -250,8 +250,21 @@ console.log(obj_2);
 
 
 
+// write function that will output the same thing for both
+
+console.log(sum(2,3));   // Outputs 5
+console.log(sum(2)(3));  // Outputs 5
 
 
+// from MDN. reformatting the object using map
+var kvArray = [{key:1, value:10}, {key:2, value:20}, {key:3, value: 30}];
+var reformattedArray = kvArray.map(function(obj){ 
+   var rObj = {};
+   rObj[obj.key] = obj.value;
+   return rObj;
+});
+// reformattedArray is now [{1:10}, {2:20}, {3:30}], 
+// kvArray is still [{key:1, value:10}, {key:2, value:20}, {key:3, value: 30}
 
 
 
